@@ -97,6 +97,6 @@ export class BrandsComponent implements OnInit {
     });
   }
   goBack() {
-    this.location.back();
+    this.router.navigateByUrl('/symptoms');
   }
 }

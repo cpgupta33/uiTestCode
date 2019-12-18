@@ -63,7 +63,7 @@ export class SubCategoryComponent implements OnInit {
   }
 
   prev() {
-    this.location.back();
+    this.router.navigateByUrl('/');
   }
 
 }

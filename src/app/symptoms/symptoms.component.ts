@@ -252,7 +252,7 @@ export class SymptomsComponent implements OnInit {
   }
 
   prev(){
-    this.location.back();
+    this.router.navigateByUrl('/subCategory');
   }
 
 }
