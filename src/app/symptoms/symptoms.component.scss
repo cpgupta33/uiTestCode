@@ -1,0 +1,182 @@
+// .symptomForm {
+//     text-align: center;
+// }
+// // .chip-value {
+// //     margin: 3px;
+// //     background-color: rgb(48, 91, 172);
+// //     height: 30px;
+// //     color: white;
+// //     border-radius: 10px;
+// // }
+// .center {
+//     display: inline;
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     color: slategrey;
+//     font-size: 30px;
+// }
+// // .symptoms-field {
+// // display: flex;
+// // align-items: center;
+// // justify-content: center;
+// // }
+// .get-brands {
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     // margin: 0 auto;
+//     margin-right: 62px;
+// }
+// .waiting {
+//     text-align: center;
+// }
+// #age {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     color: darkslategrey;
+//     font-size: 15px;
+// }
+// #sys {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     color: slategrey;
+//     margin-right: 15px;
+// }
+// .chip-remove {
+//     color: white;
+// }
+// mat-chip {
+//     margin-left: 5px !important;
+//     margin-right: 2px !important;
+//     margin-top: 5px !important;
+//     margin-bottom: 5px !important;
+// }
+// .chip {
+//     // display: flex;
+//     // align-items: center;
+//     // justify-content: center;
+//     // margin: 0 auto;
+//     // margin: 4px;
+//     margin-left: 10px;
+//     margin-right: 10px;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+// }
+// // .left {
+// //     left: 0;
+// //     width: 50%;
+// // }
+// .right {
+//     right: 0;
+//     // border: 1px solid black;
+// }
+// .home-card {
+//     width: 50%;
+//     margin: 10% auto;
+//     vertical-align: middle;
+// }
+// @media only screen and (max-width: 520px) {
+//     .home-card {
+//         width: 300px;
+//         vertical-align: middle;
+//         margin: 10% auto;
+//     }
+//     .right {
+//         width: 100%;
+//         height: 50%;
+//     }
+// }
+.text {
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 60, 116);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 650px;
+    margin-left: 400px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 0 auto;
+}
+
+table {
+    width: 650px;
+    margin-left: 400px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 0 auto;
+}
+
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+mat-paginator {
+    margin-top: 20px;
+    // margin-left: 400px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+@media only screen and (max-width: 320px) {
+    .text {
+        margin-top: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(8, 60, 116);
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    mat-form-field {
+        width: 500px !important;
+        // margin-left: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .symptoms {
+        // width: 600px;
+    }
+    mat-paginator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 400px !important;
+        margin-top: 10px;
+    }
+    table {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-left: 189px;
+    }
+    .next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+}

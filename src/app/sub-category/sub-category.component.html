@@ -1,0 +1,21 @@
+<div class="">
+    <p class="text">What's bothering you today?</p>
+</div>
+
+<div class="subCategory">
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let sc of subCategories; let i = index" (click)="setClickedRow(sc)" [class.active]="sc == selectedRow">
+                <mat-card class="symptom">
+                    <p class="name">{{sc}}</p>
+                    <!-- <p class="symptoms">Most common symptoms: {{sc.symptoms}}</p> -->
+                </mat-card>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row next-btn">
+    <button class="prev" mat-button mat-raised-button color="primary" type="button" (click)="prev()">Previous</button>
+    <button class="next" mat-button mat-raised-button color="primary" type="button" (click)="selectSymptoms()">Next</button>
+</div>

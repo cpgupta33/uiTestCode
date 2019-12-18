@@ -1,0 +1,21 @@
+<div class="row md">
+    <div class="col-md-6 data">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title class="md">{{medicineDesc.data.brand}}</mat-card-title>
+            <mat-card-subtitle class="md">{{medicineDesc.data.sub_brand}}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="bg-img md"><img src="../../assets/images/noimg.png" style="width:100px; height : 100px" alt="Img"></div>
+        <mat-card-content>
+            <p class="md">Item Number : {{medicineDesc.data.item_number}}</p>
+            <p class="md">UPC Number : {{medicineDesc.data.upc}}</p>
+            <p class="md">Medicine : {{medicineDesc.data.item_long_desc}}</p>
+            <!-- <p class="md">Segment : {{medicineDesc.data.segment}}</p>
+            <p class="md">Sub Segment : {{medicineDesc.data.sub_segment}}</p>
+            <p class="md">Symptoms : {{medicineDesc.data.symptoms}}</p> -->
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="md" mat-button mat-raised-button color="primary" (click)="goBack()">Back</button>
+        </mat-card-actions>
+    </div>
+</div>

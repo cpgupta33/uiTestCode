@@ -1,0 +1,91 @@
+<!-- <div class="waiting" *ngIf="!gotBrands && !allSymptoms.length">
+    <p><b id="age">Age Group : </b> {{ageValue}}</p>
+    <p>Please wait while we get you suggestions on symptoms...</p>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<div *ngIf=" !gotBrands && allSymptoms.length">
+    <div class="symptomForm">
+        <div class="row center ">
+            <p>How are you feeling today?</p>
+        </div>
+        <form [formGroup]="symptomFormGroup" class="symptomForm">
+            <div class="row symptoms-field">
+                <div class="col-md-6 left">
+                    <div class="row">
+                        <p id="sys">Specify your symptoms</p>
+                    </div>
+                    <div class="row">
+                        <mat-form-field>
+                            <mat-chip-list #chipList aria-label="Symptom selection">
+                                <input matInput required placeholder="Enter symptom" #symptomInput [formControl]="symptomCtrl" [matAutocomplete]="auto" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="symptomAddOnBlur" (matChipInputTokenEnd)="addSymptom($event)">
+                            </mat-chip-list>
+                            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="symptomSelected($event)">
+                                <mat-option *ngFor="let symptom of filteredSymptoms | async">
+                                    {{symptom}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                    <div *ngIf="valueAlreadySelected">
+                        <div class="alert alert-danger">Symptom already selected!
+                            <mat-icon (click)="cancel()">cancel</mat-icon>
+                        </div>
+                    </div>
+                    <div class="row get-brands">
+                        <button mat-button mat-raised-button color="primary" type="button" (click)="getBrands()">Get Brands</button>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="chip">
+                        <mat-chip class="chip-value" *ngFor="let symptom of symptoms" [selectable]="symptomSelectable" [removable]="symptomRemovable" (removed)="removeSymptom(symptom)">
+                            {{symptom}}
+                            <mat-icon matChipRemove class="chip-remove" *ngIf="symptomRemovable">cancel</mat-icon>
+                        </mat-chip>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div> -->
+
+<div class="text">
+    <p>Select all that apply</p>
+</div>
+
+<div class="symptoms">
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef>
+                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+        </tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+<div class="row next">
+    <button class="prev" mat-button mat-raised-button color="primary" type="button" (click)="prev()">Previous</button>
+    <button class="next" mat-button mat-raised-button color="primary" type="button" (click)="getBrands()">Next</button>
+</div>

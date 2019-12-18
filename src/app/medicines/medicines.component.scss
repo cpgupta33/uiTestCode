@@ -1,0 +1,267 @@
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+// .example-card {
+//     width: 75% !important;
+//     border: none;
+//     margin-left: 10px;
+//     height: 300px;
+// }
+.card-deck-container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    padding: 10px 10px 30px;
+    margin: 10px 10px 10px 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-dimensions {
+    width: 64rem;
+    overflow: hidden;
+}
+
+.margin-prop {
+    display: block !important;
+    margin-bottom: 0px;
+}
+
+.actions {
+    margin-top: 0px;
+}
+
+.bg-img {
+    margin-left: 40px;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #f0f0f0;
+    // border: 0.5px solid black;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+}
+
+.view {
+    position: absolute;
+    bottom: 1px;
+    margin-bottom: 10px;
+}
+
+owl-carousel {
+    width: 100% !important;
+}
+
+mat-card {
+    margin: 3% 0% 1% 15% !important;
+    position: relative !important;
+    width: 100% !important;
+    // height: 50% !important;
+}
+
+mat-card-content {
+    margin-left: 40px !important;
+}
+
+.viewData {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 2560px) {
+    .example-card {
+        width: 200px;
+        border: none;
+        margin: 0em;
+        height: 400px;
+    }
+    .bg-img {
+        margin-left: 40px;
+    }
+    owl-carousel {
+        width: 100% !important;
+    }
+    // mat-card {
+    //     margin: 3% 0% 1% 5% !important;
+    //     position: relative !important;
+    //     width: 35% !important;
+    // }
+    mat-card {
+        margin: 3% 0% 1% 15% !important;
+        position: relative !important;
+        width: 100% !important;
+        // height: 50% !important;
+    }
+    mat-card-content {
+        margin-left: 40px !important;
+    }
+    .owl-c {
+        width: 600px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        // width: 50px;
+        // width: 300px;
+        // vertical-align: middle;
+        // margin: 10% auto;
+    }
+    .view {
+        position: absolute;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .row-dimensions {
+        width: 64rem;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .example-card {
+        width: 200px;
+        border: none;
+        margin: 0em;
+        height: 400px;
+        // color: red;
+    }
+    .owl-c {
+        width: 100%;
+        // width: 50px;
+        // width: 300px;
+        // vertical-align: middle;
+        // margin: 10% auto;
+    }
+    owl-carousel-o {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    mat-card {
+        margin: 3% 0% 1% 15% !important;
+        position: relative !important;
+        width: 80% !important;
+    }
+    mat-card-content {
+        margin-left: 40px !important;
+    }
+    .view {
+        position: absolute;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .row-dimensions {
+        width: 64rem;
+        overflow: hidden;
+    }
+    .bg-img {
+        margin-left: 40px;
+    }
+}
+
+::ng-deep .carousel-control-next {
+    right: -10%;
+    // font-size: 9rem !important;
+}
+
+::ng-deep .carousel-control-prev {
+    left: -10%;
+    margin-left: 20px;
+    // font-size: 9rem !important;
+}
+
+.next-prev {
+    font-size: 9rem;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: black;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: slategrey;
+    font-size: 25px;
+}
+
+owl-carousel-o {
+     ::ng-deep .owl-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        font-size: 5rem;
+        color: grey;
+        .fa {
+            display: none;
+        }
+        margin-right: 232px;
+    }
+     ::ng-deep.owl-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0rem;
+        color: grey;
+        font-size: 5rem;
+        .fa {
+            display: none;
+        }
+        margin-left: 300px;
+    }
+     ::ng-deep .owl-theme {
+        display: block;
+        width: 108%;
+        z-index: 1;
+    }
+     ::ng-deep .owl-theme {
+        display: block;
+        z-index: 1;
+    }
+     ::ng-deep .owl-stage {
+        display: flex;
+    }
+    .mb-5 {
+        margin-bottom: 1rem!important;
+    }
+    .mat_card_style {
+        box-shadow: 0rem 0.1rem 0rem rgba(0, 0, 0, 0.15) !important;
+        cursor: pointer;
+        border-radius: 0;
+        padding: 1rem 1rem 3rem 1rem;
+        width: 85%;
+        .subtitle_style {
+            position: absolute;
+            top: 15px;
+            right: 22px;
+            img {
+                height: 20px;
+                width: 20px;
+                margin-left: 43px !important;
+            }
+        }
+        .title {
+            margin: 0 0 14px;
+        }
+    }
+    font-size: 90px !important;
+}

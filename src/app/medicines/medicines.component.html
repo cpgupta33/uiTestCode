@@ -1,0 +1,35 @@
+<div class="medicines-component">
+    <div class="row">
+        <span class="dot">
+            <i class="glyphicon glyphicon-arrow-left back" (click) = "prevPage()"></i>
+        </span>
+    </div>
+    <div class="row heading">
+        Prescribed Medicines...
+    </div>
+    <div class="row">
+        <div class="row owl-c">
+            <owl-carousel-o class="flex-row row-dimensions" [options]="customOptions">
+                <ng-container *ngFor="let d of medicineData ; let i = index">
+                    <ng-template carouselSlide>
+                        <!-- class="example-card" -->
+                        <mat-card>
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>{{d.brand}}</mat-card-title>
+                                <mat-card-subtitle class="margin-prop">{{d.sub_brand}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <div class="bg-img"><img src="../../assets/images/noimg.png" style="width:100px; height : 100px" alt="Img"></div>
+                            <mat-card-content class="margin-prop">
+                                <p>Item Number : {{d.item_number}}</p>
+                                <p>UPC Number : {{d.upc}}</p>
+                                <p>Medicine : {{d.item_long_desc}}</p>
+                                <button mat-button mat-raised-button color="primary" class="viewData" [routerLink]="['/medicineDescription', d.id] ">View</button>
+                            </mat-card-content>
+                        </mat-card>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

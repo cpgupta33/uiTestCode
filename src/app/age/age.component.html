@@ -1,0 +1,97 @@
+<!-- <div>
+    <form [formGroup]="ageFormGroup" class="ageForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Enter age</mat-label>
+            <input class="age" matInput formControlName="ageCtrl" (keyup)="eventHandler($event)" (keypress)="eventHandler($event)" required>
+        </mat-form-field>
+        <div *ngIf="ageControl.dirty || !ageControl.untouched">
+            <div *ngIf="ageControl.errors?.pattern">
+                <div class="alert alert-danger">
+                    Number Only
+                </div>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+<!-- <div class="age">
+    <p>What's your age group?</p>
+</div>
+
+<div class="ag">
+    <div class="row">
+        <div class="">
+            <div id="childimg">
+                <img src="../../assets/logos/child.jpg" (click)="getAgeGroup('Child')" width="80px" height="80px" alt="">
+            </div>
+            <div id="childc">
+                <p style="color: rgb(9, 66, 128); font-weight: bold;">Child</p>
+            </div>
+            <div id="childc">
+                <p>(age 2-11)</p>
+            </div>
+        </div>
+        <div class="">
+            <div id="adultimg">
+                <img src="../../assets/logos/adult.jpg" (click)="getAgeGroup('Adult')" width="80px" height="80px" alt="">
+            </div>
+            <div id="adultc">
+                <p style="color: rgb(9, 66, 128); font-weight: bold;">Adult</p>
+            </div>
+            <div id="adultc">
+                <p>(12 & above)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row next">
+    <button class="next" mat-button mat-raised-button color="primary" type="button" (click)="next()">Next</button>
+</div> -->
+
+<div id="ageSelectionWrapper">
+    <div class="age">
+        <p>What's your age group?</p>
+    </div>
+    <div class="ag">
+        <div class="row">
+            <div class="col">
+                <div id="childimg" [ngClass]='selectedGroup == "Child"? "selected":""'>
+                    <img src="../../assets/logos/child.jpg" (click)="getAgeGroup('Child')" width="80px" height="80px" alt="">
+                </div>
+                <div id="type-text">
+                    <p>{{child}}</p>
+                </div>
+                <div id="age-text">
+                    <p>(age 2-11)</p>
+                </div>
+            </div>
+            <div class="col">
+                <div id="adultimg" [ngClass]='selectedGroup == "Adult"? "selected":""'>
+                    <img src="../../assets/logos/adult.jpg" (click)="getAgeGroup('Adult')" width="80px" height="80px" alt="">
+                </div>
+                <div id="type-text">
+                    <p>{{adult}}</p>
+                </div>
+                <div id="age-text">
+                    <p>(12 & above)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-wrapper">
+        <div class="row">
+            <!-- <div class="col">
+          <button class="previous" mat-button mat-raised-button color="info" type="button" (click)="previous()" disabled>Previous</button>
+        </div> -->
+            <div class="col">
+                <button class="next" mat-button mat-raised-button color="warn" type="button" (click)="next()" [disabled]='!selectedGroup'>Next</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="row next">
+      <button class="next" mat-button mat-raised-button color="primary" type="button" (click)="next()">Next</button>
+    </div> -->
+</div>

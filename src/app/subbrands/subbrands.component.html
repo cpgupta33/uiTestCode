@@ -1,0 +1,33 @@
+<div class="row heading">
+    Here are some prescribed sub-brands for you!
+</div>
+
+<!-- <div class="row content"> -->
+<!-- <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field> -->
+
+<div class="example-container mat-elevation-z8 parent-div">
+    <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="subBrand">
+            <mat-header-cell class="header" *matHeaderCellDef> Sub Brand </mat-header-cell>
+            <mat-cell class="brand-value" *matCellDef="let element">
+                <!-- (click)="showSubBrands(element)" -->
+                <button mat-flat-button class="brand-value" [routerLink]="['/medicines' , element]">{{element}}</button>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <br>
+
+    <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20] ">
+    </mat-paginator>
+</div>
+
+<!-- <div *ngFor="let sbd of subBrandsData">
+    {{sbd}}
+</div> -->
+
+<button mat-button mat-raised-button color="primary" class="subBrand" type="button" (click)="goBack()">Choose other brand</button>

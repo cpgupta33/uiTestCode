@@ -1,0 +1,73 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.mat-elevation-z8 {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: slategrey;
+    font-size: 25px;
+}
+
+// .brands {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 0 auto;
+// }
+.header {
+    background-color: #3782a5;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2px;
+    padding: 2px;
+}
+
+.brand-value {
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    top: 0px;
+    bottom: 0px;
+    outline: none;
+    // position: absolute;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.table-collapse {
+    width: 100%;
+}
+
+.goBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+tbody.collapse.in {
+    display: table-row-group;
+}

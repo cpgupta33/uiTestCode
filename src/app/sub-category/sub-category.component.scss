@@ -1,0 +1,111 @@
+.text {
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 60, 116);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subCategory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+mat-card {
+    margin-bottom: 10px !important;
+}
+
+.table tr.active mat-card {
+    background-color: #bcccdb !important;
+    color: white;
+}
+
+.name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 60, 116);
+    font-weight: bold;
+}
+
+.next {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 0px auto;
+    margin-left: 100px;
+}
+
+.prev {
+    margin-left: 565px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 0px auto;
+    // margin-left: 10px;
+}
+
+@media only screen and (max-width: 320px) {
+    .text {
+        margin-top: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(8, 60, 116);
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .subCategory {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    .table {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    mat-card {
+        margin-bottom: 10px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+        width: 422px !important;
+        margin-left: 108px;
+    }
+    .table tr.active mat-card {
+        background-color: #bcccdb !important;
+        color: white;
+    }
+    .name {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(8, 60, 116);
+        font-weight: bold;
+    }
+    .next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+    .prev {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+    }
+}

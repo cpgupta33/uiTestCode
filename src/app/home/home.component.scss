@@ -1,0 +1,21 @@
+.home-card {
+    width: 50%;
+    margin: 10% auto;
+    vertical-align: middle;
+}
+
+// f0d78c
+.raisedBox {
+    // padding: 10px;
+    // border: 1px solid cyan;
+    // box-shadow: -1px 1px cyan, -2px 2px cyan, -3px 3px cyan, -4px 4px cyan, -5px 5px cyan;
+    // background: linear-gradient(to right, red, purple);
+}
+
+@media only screen and (max-width: 520px) {
+    .home-card {
+        width: 300px;
+        vertical-align: middle;
+        margin: 10% auto;
+    }
+}
