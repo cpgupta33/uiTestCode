@@ -16,6 +16,28 @@ export class SharedService {
   private subBrandsData = [];
   private brandName: string;
 
+  images = [
+    {name: 'Abreva' , image: 'assets/medicines/abreva.png' },
+    {name: 'Advil', image: 'assets/medicines/advil.jpg'},
+    {name: 'Afrin', image: 'assets/medicines/afrin.png'},
+    {name: 'Airbrone', image: 'assets/medicines/airbrone.jpg'},
+    {name: 'Alavert', image: 'assets/medicines/alavert.jpg'},
+    {name: 'Aleve', image: 'assets/medicines/aleve.jpg'},
+    {name: 'Alka', image: 'assets/medicines/alka.png'},
+    {name: 'Allegra', image: 'assets/medicines/allegra.jpg'},
+    {name: 'Anbesol', image: 'assets/medicines/anbesol.jpg'},
+    {name: 'Aquaphor', image: 'assets/medicines/aquaphor.jpg'},
+    {name: 'Aubio', image: 'assets/medicines/aubio.jpg'},
+    {name: 'AYR', image: 'assets/medicines/ayr.jpg'},
+    {name: 'Benadryl', image: 'assets/medicines/benadryl.jpg'},
+    {name: 'Benzedrex', image: 'assets/medicines/benzedrex.jpg'},
+    {name: 'Blistex', image: 'assets/medicines/blistex.jpg'},
+    {name: 'Campho-phenique', image: 'assets/medicines/campho-phenique.jpg'},
+    {name: 'Claritin', image: 'assets/medicines/claritin.jpg'},
+    {name: 'Sudafed', image: 'assets/medicines/sudafed.jpg'},
+    {name: 'Zyrtec', image: 'assets/medicines/zyrtec.jpg'},
+  ];
+
   setIntegerAge(age) {
     this.integerAge = age;
   }
@@ -83,5 +105,9 @@ export class SharedService {
 
   getSubBrands() {
     return this.subBrandsData;
+  }
+
+  getImages(){
+    return this.images;
   }
 }

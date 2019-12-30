@@ -28,6 +28,7 @@ export class BrandsComponent implements OnInit {
   meds = {};
   brandData = {};
   symptomsData = {};
+  brands = [];
 
   constructor(
     public sharedService: SharedService,
@@ -52,12 +53,16 @@ export class BrandsComponent implements OnInit {
     this.symptomsData['symptoms'] = this.sharedService.getSymptoms() ;
 
     this.dataService.getMedicinesData(this.symptomsData).subscribe(medicine => {
-      console.log('Medicines : ' + medicine.data.data );
+      console.log('Medicines : ' + Object.keys(medicine.data.data) );
       // this.sharedService.setMedicines(medicine.data.data);
       // this.symptomData = medicine.data.data;
-      this.dataSource = new MatTableDataSource(medicine.data.data);
 
-      this.dataSource.paginator = this.paginator;
+      Object.keys(medicine.data.data).forEach(key => {
+        this.brands.push(key);
+      });
+
+      this.dataSource = new MatTableDataSource(this.brands);
+      this.dataSource.paginator = this.paginator; 
       // console.log('Symptms : ' + this.symptomData);
     });
 

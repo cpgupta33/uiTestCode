@@ -4,6 +4,7 @@ import { DataService } from '../Services/data.service';
 import { SharedService } from '../Services/shared.service';
 import { Location } from '@angular/common';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ControlContainer } from '@angular/forms';
 
 @Component({
   selector: 'app-medicines',
@@ -71,11 +72,28 @@ export class MedicinesComponent implements OnInit {
 
     this.dataService.getMedicineForSubBrand(this.subBrandDetails).subscribe(medicines => {
       const data = medicines.data.data;
-      for (let i = 0 ; i < Object.keys(data).length; i++) {
-        this.medicineData.push(data[i]);
-      }
+      const images = this.sharedService.getImages();
+      this.medicineData = data;
+      console.log(data);
+      // console.log(Object.values(data));
+      // for (let i = 0 ; i < Object.keys(data).length; i++) {
+      //   // this.medicineData.push(data[i]);
+      //   // console.log(data[i]);
+      //   console.log(data[i]);
+      //   for (let j = 0 ; j < images.length; j++) {
+      //     if (data[i].brand.toUpperCase() === images[j].name.toUpperCase()) {
+      //       console.log(images[j].image);
+      //       data[i]['image'] = images[j].image;
+      //       this.medicineData.push(data[i]);
+      //       console.log('Medicine data : ' + this.medicineData);
+      //     } else {
+      //       // data[i]['image'] = 'assets/images/noimg.png';
+      //       // this.medicineData.push(data[i]);
+      //     }
+      //   }
+      //   // console.log(data[i].brand);
+      // }
     });
-    // console.log('Data : ' + this.medicineData);
   }
 
   goBack() {
